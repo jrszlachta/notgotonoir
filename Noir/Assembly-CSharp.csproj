@@ -50,6 +50,7 @@
      <Compile Include="Assets\Scripts\OptionsManager.cs" />
      <Compile Include="Assets\Scripts\PlayerPrefsInterface.cs" />
      <Compile Include="Assets\Scripts\PressStartControl.cs" />
+     <Compile Include="Assets\Scripts\StartGameControl.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity5.5.0/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
