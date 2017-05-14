@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 0b0f46e67ae8346479a0acc69e89831a
+timeCreated: 1494788411
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Single Sleeve
+  fontNames:
+  - Single Sleeve
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
