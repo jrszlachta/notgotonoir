@@ -9,7 +9,6 @@ public class PressStartControl : MonoBehaviour {
 	public LevelManager lvlManager;
 
 	private float lastFadeSecond; // Stores last second which a fade (in/out) happened
-	//private float tempTime; // To use in the fade animation
 	private bool inOut = true; // Controls if it fades in or out (out on true)
 
 	private Text thisText;
@@ -25,22 +24,18 @@ public class PressStartControl : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (Time.time - lastFadeSecond < fadeTime) {
-			//tempTime = Time.time;
-			//if (inFadeInterval ()) {
 			fades ();
-			//} else {
-				//inOut = !inOut;
-				//lastFadeSecond = Time.time;
 		} else {
 			inOut = !inOut;
 			lastFadeSecond = Time.time;	
 		}
 
 		if (Input.GetKeyDown(KeyCode.Return)) {
-			lvlManager.ChangeScene("work_in_progress"); // TODO: Substitute for actual level name later
+			lvlManager.ChangeScene("01a Main Menu"); // TODO: Substitute for actual level name later
 		}
 	}
 
+	// Method to fade text in or out
 	private void fades(){
 		float alphaChange = Time.deltaTime / fadeTime;
 		if (inOut)
@@ -49,8 +44,4 @@ public class PressStartControl : MonoBehaviour {
 			currentColor.a += alphaChange;
 		thisText.color = currentColor;
 	}
-
-	/*private bool inFadeInterval(){
-		return (Time.time - tempTime < fadeTime);
-	}*/
 }
