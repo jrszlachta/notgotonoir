@@ -6,21 +6,21 @@ using UnityEngine.UI;
 public class OptionsManager : MonoBehaviour {
 
 	public Slider masterVolumeSlider;
-	private PlayerPrefsInterface prefsInterface;
+	public MusicManager audioMan;
 
 	/* On start, retrieve preferences */
 	void Start () {
-		prefsInterface = GetComponent<PlayerPrefsInterface> ();
-		masterVolumeSlider.value = prefsInterface.GetMasterVolume(); 
-		// AudioManager.volume = GetMasterVolume(); // Set volume to the stored value
+		audioMan = GameObject.FindObjectOfType<MusicManager> ();
+		masterVolumeSlider.value = PlayerPrefsInterface.GetMasterVolume(); 
+		audioMan.GlobalSetVolume(masterVolumeSlider.value); // Set volume to the stored value
 	}
 
 	public void OnVolumeChanged(){
-		// AudioManager.volume = masterVolumeSlider.value
+		audioMan.GlobalSetVolume(masterVolumeSlider.value); // Set volume to the stored value
 		Debug.Log("Changed volume successfully");
 	}
 	
 	public void SaveOptions(){
-		prefsInterface.SetMasterVolume (masterVolumeSlider.value);
+		PlayerPrefsInterface.SetMasterVolume (masterVolumeSlider.value);
 	}
 }
