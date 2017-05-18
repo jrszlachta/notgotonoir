@@ -1,7 +1,7 @@
+﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2008
-
-Project("{E72FF2EB-EBB5-222C-8421-FDFE895AA5AD}") = "Noir", "Assembly-CSharp.csproj", "{AE28FBD7-FCDE-4CBD-4CEB-023F33C1B7A9}"
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Noir", "Assembly-CSharp.csproj", "{AE28FBD7-FCDE-4CBD-4CEB-023F33C1B7A9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
