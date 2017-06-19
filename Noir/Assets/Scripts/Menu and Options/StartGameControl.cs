@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class StartGameControl : MonoBehaviour {
 
-	public MusicManager audioMan;
+	public AudioManager audioMan;
 
 	// Use this for initialization
 	void Start () {
-		audioMan = GameObject.FindObjectOfType<MusicManager> ();
-		audioMan.GlobalSetVolume(PlayerPrefsInterface.GetMasterVolume()); // Set volume to the value stored previously
+		audioMan.setMusicVolume(PlayerPrefsInterface.GetMasterVolume()); // Set volume to the value stored previously
 	}
 }
