@@ -9,5 +9,6 @@ public class StartGameControl : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		audioMan.setMusicVolume(PlayerPrefsInterface.GetMasterVolume()); // Set volume to the value stored previously
+		audioMan.setGameVolume(PlayerPrefsInterface.GetSoundsVolume()); // Set volume to the value stored previously
 	}
 }
