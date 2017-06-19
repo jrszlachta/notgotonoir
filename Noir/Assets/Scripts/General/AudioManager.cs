@@ -61,9 +61,7 @@ public class AudioManager : MonoBehaviour {
 	public void setMusicVolume(float volume) {
 		musicVolume = volume;
 		try {
-			Debug.Log("Music Volume is " + musicVolume + " and source volume is " + activeMusic.source.volume);
 			activeMusic.source.volume = musicVolume;
-			Debug.Log("And now music volume is " + musicVolume + " and source volume is " + activeMusic.source.volume);
 		} catch(NullReferenceException e) {
 			Debug.Log("No active music to change the volume");
 		}
@@ -82,14 +80,12 @@ public class AudioManager : MonoBehaviour {
 	}
 
 	void checkSceneMusicDelegate(Scene scene, LoadSceneMode mode) {
-		Debug.Log("Loaded scene " + scene.name);
 		checkSceneMusic();
 	}
 
 	void checkSceneMusic() {
 		// Play("MainMenu");
 		string currentScene = SceneManager.GetActiveScene().name;
-		Debug.Log("Cena atual: " + currentScene);
 		Sound s = Array.Find(sounds, sound => sound.sceneMusic == currentScene);
 		if(s != null) {
 			if((activeMusic == null) || (activeMusic.name != s.name)) {
