@@ -11,6 +11,7 @@ public class MaleCharacterControl : MonoBehaviour {
 	private SpriteRenderer sprRender;
 	private Rigidbody2D rb;
 	public Transform pressE;
+	private Collision2D collisionObj = null;
 
 	// Use this for initialization
 	void Start () {
@@ -41,6 +42,12 @@ public class MaleCharacterControl : MonoBehaviour {
 			animator.SetBool ("WalkBool", false);
 			rb.velocity = new Vector2(0,0);
 		}
+
+		if(Input.GetKeyDown("e")) {
+			if(collisionObj != null) {
+				collisionObj.gameObject.GetComponent<Interactable>().Interact();
+			}
+		}
 	}
 
 	void OnCollisionEnter2D(Collision2D coll){
@@ -48,9 +55,7 @@ public class MaleCharacterControl : MonoBehaviour {
 		if (coll.gameObject.tag == "Interactable") {
 			myE = transform.Find("ECanvas");
 			myE.gameObject.SetActive(true);
-			if(Input.GetKey("e")) {
-				coll.gameObject.GetComponent<Interactable>().Interact();
-			}
+			collisionObj = coll;
 		}
 
 		if (coll.gameObject.tag == "ContinueWall") {
@@ -64,6 +69,7 @@ public class MaleCharacterControl : MonoBehaviour {
 		if (coll.gameObject.tag == "Interactable") {
 			myE = transform.Find("ECanvas");
 			myE.gameObject.SetActive(false);
+			collisionObj = null;
 		}
 	}
 }
