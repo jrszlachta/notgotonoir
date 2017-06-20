@@ -60,8 +60,11 @@ public class AudioManager : MonoBehaviour {
 
 	public void setMusicVolume(float volume) {
 		musicVolume = volume;
+		Debug.Log("Volume agora é " + volume);
 		try {
+			Debug.Log("Volume do source é  " + activeMusic.source.volume);
 			activeMusic.source.volume = musicVolume;
+			Debug.Log("Volume do source foi para  " + activeMusic.source.volume);
 		} catch(NullReferenceException e) {
 			Debug.Log("No active music to change the volume");
 		}

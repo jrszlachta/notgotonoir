@@ -19,7 +19,7 @@ public class MaleCharacterControl : MonoBehaviour {
 		rb = GetComponent<Rigidbody2D> ();
 		lvlMan = FindObjectOfType<LevelManager> ();
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		/* Walks Right */
@@ -45,11 +45,14 @@ public class MaleCharacterControl : MonoBehaviour {
 
 	void OnCollisionEnter2D(Collision2D coll){
 		Transform myE;
-		if (coll.gameObject.tag == "NPC") {
+		if (coll.gameObject.tag == "Interactable") {
 			myE = transform.Find("ECanvas");
 			myE.gameObject.SetActive(true);
+			if(Input.GetKey("e")) {
+				coll.gameObject.GetComponent<Interactable>().Interact();
+			}
 		}
-			
+
 		if (coll.gameObject.tag == "ContinueWall") {
 			lvlMan.ChangeScene ("work_in_progress");
 		}
@@ -58,7 +61,7 @@ public class MaleCharacterControl : MonoBehaviour {
 
 	void OnCollisionExit2D(Collision2D coll){
 		Transform myE;
-		if (coll.gameObject.tag == "NPC") {
+		if (coll.gameObject.tag == "Interactable") {
 			myE = transform.Find("ECanvas");
 			myE.gameObject.SetActive(false);
 		}
