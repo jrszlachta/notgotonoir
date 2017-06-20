@@ -29,5 +29,6 @@ public class OptionsManager : MonoBehaviour {
 
 	public void SaveOptions(){
 		PlayerPrefsInterface.SetMasterVolume (musicVolumeSlider.value);
+		PlayerPrefsInterface.SetSoundsVolume (soundsVolumeSlider.value);
 	}
 }
