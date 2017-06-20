@@ -32,3 +32,16 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
+Noir/.idea/.idea.Noir/.idea/contentModel.xml
+Noir/.idea/.idea.Noir/.idea/modules.xml
+Noir/.idea/.idea.Noir/.idea/vcs.xml
+Noir/.idea/.idea.Noir/.idea/workspace.xml
+Noir/.idea/.idea.Noir/riderModule.iml
+Noir/Noir.sln
+Noir/Assets/Plugins/Editor/JetBrains/Unity3DRider.cs.meta
+Noir/Assets/Plugins/Editor/JetBrains/Unity3DRider.cs
+Noir/Assets/Plugins/Editor/JetBrains.meta
+Noir/Assets/Plugins/Editor.meta
+Noir/Assets/Plugins.meta
+Noir/Noir.sln
+Noir/Noir.sln
