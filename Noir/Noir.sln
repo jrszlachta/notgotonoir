@@ -1,8 +1,9 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2008
-Project("{E72FF2EB-EBB5-222C-8421-FDFE895AA5AD}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{AE28FBD7-FCDE-4CBD-4CEB-023F33C1B7A9}"
+
+Project("{E72FF2EB-EBB5-222C-8421-FDFE895AA5AD}") = "Noir", "Assembly-CSharp.csproj", "{AE28FBD7-FCDE-4CBD-4CEB-023F33C1B7A9}"
 EndProject
-Project("{E72FF2EB-EBB5-222C-8421-FDFE895AA5AD}") = "Assembly-CSharp-Editor-firstpass", "Assembly-CSharp-Editor-firstpass.csproj", "{124BC89E-377A-ED26-736F-1D7C71487AA3}"
+Project("{E72FF2EB-EBB5-222C-8421-FDFE895AA5AD}") = "Noir", "Assembly-CSharp-Editor-firstpass.csproj", "{124BC89E-377A-ED26-736F-1D7C71487AA3}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
