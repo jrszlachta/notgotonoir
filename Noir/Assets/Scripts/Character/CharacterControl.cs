@@ -68,7 +68,7 @@ public class CharacterControl : MonoBehaviour {
 		}
 
 		if (coll.gameObject.tag == "ContinueWall") {
-			lvlMan.ChangeScene ("work_in_progress");
+			coll.gameObject.GetComponent<LevelPortal>().enterPortal();
 		}
 		//myE.TakeColisionTag (coll.gameObject.tag);
 	}

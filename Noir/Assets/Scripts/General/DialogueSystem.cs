@@ -48,9 +48,9 @@ public class DialogueSystem : MonoBehaviour {
 	}
 
 	public void continueDialog() {
-		if(dialogueIndex < dialogueLines.Count) {
-			dialogueText.text = dialogueLines[dialogueIndex];
+		if(dialogueIndex < dialogueLines.Count-1) {
 			dialogueIndex++;
+			dialogueText.text = dialogueLines[dialogueIndex];
 		} else {
 			dialogPanel.SetActive(false);
 		}
