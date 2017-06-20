@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MaleCharacterControl : MonoBehaviour {
+public class CharacterControl : MonoBehaviour {
 
 	//[Range(50f,100f)]
 	public float walkSpeed;
