@@ -20,17 +20,20 @@ public class PressStartControl : MonoBehaviour {
 		thisText = GetComponent<Text>();
 		currentColor = thisText.color;
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		if (Time.time - lastFadeSecond < fadeTime) {
 			fades ();
 		} else {
 			inOut = !inOut;
-			lastFadeSecond = Time.time;	
+			lastFadeSecond = Time.time;
 		}
 
-		if (Input.GetKeyDown(KeyCode.Return)) {
+		if (Input.anyKeyDown) {
+			if (Input.GetMouseButtonDown(0) || Input.GetMouseButtonDown(1) || Input.GetMouseButtonDown(2)) {
+				return;
+			}
 			lvlManager.ChangeScene("01a Main Menu"); // TODO: Substitute for actual level name later
 		}
 	}

@@ -17,13 +17,13 @@ public class SplashFade : MonoBehaviour {
 		splashImage.canvasRenderer.SetAlpha(0.0f);
 		splashText.canvasRenderer.SetAlpha(0.0f);
 		pixelate.lockXY = true;
-		pixelate.pixelSizeX = 7;
+		pixelate.pixelSizeX = 10;
 
 		FadeIn();
 		yield return new WaitForSeconds(fadeIn/4);
-		pixelate.pixelSizeX = 5;
+		pixelate.pixelSizeX = 7;
 		yield return new WaitForSeconds(fadeIn/4);
-		pixelate.pixelSizeX = 3;
+		pixelate.pixelSizeX = 4;
 		yield return new WaitForSeconds(fadeIn/4);
 		pixelate.pixelSizeX = 1;
 		yield return new WaitForSeconds(fadeIn/4);
