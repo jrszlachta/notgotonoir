@@ -18,7 +18,7 @@ public class PlayerPrefsInterface : MonoBehaviour {
 	}
 
 	public static float GetMasterVolume(){
-		return (PlayerPrefs.GetFloat (MASTER_VOLUME_KEY));
+		return (PlayerPrefs.GetFloat (MASTER_VOLUME_KEY, 1f));
 	}
 
 	public static void SetSoundsVolume(float newVolume){
@@ -26,7 +26,7 @@ public class PlayerPrefsInterface : MonoBehaviour {
 	}
 
 	public static float GetSoundsVolume(){
-		return (PlayerPrefs.GetFloat (SOUNDS_VOLUME_KEY));
+		return (PlayerPrefs.GetFloat (SOUNDS_VOLUME_KEY, 1f));
 	}
 
 	public static void SetCharGender(int gender){
